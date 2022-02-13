@@ -2,12 +2,6 @@
 
 [Avorion][0] dedicated server
 
-Branch | Size             | Version          
--------|------------------|---------------
-latest | [![Size][6]][2]  | [![Version][7]][2]
-stable | [![Size][8]][2]  | [![Version][9]][2]
-beta   | [![Size][10]][2] | [![Version][11]][2]
-
 ## Usage
 
 ### Quickstart

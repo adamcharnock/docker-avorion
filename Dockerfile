@@ -1,5 +1,4 @@
 FROM cm2network/steamcmd:steam as build
-ARG VERSION
 ARG INSTALL_ARGS
 RUN set -x \
 	&& "${STEAMCMDDIR}/steamcmd.sh" \
@@ -39,12 +38,10 @@ EXPOSE 27021/udp
 ARG CREATED
 ARG REVISION
 ARG SOURCE
-ARG VERSION
 
 LABEL org.opencontainers.image.created=$CREATED
 LABEL org.opencontainers.image.revision=$REVISION
 LABEL org.opencontainers.image.source=$SOURCE
-LABEL org.opencontainers.image.version=$VERSION
 
 # down here we are basically copying the server.sh, since that one does not `exec`
 # since now the AvorionServer is pid1 we can use `stop` commands since SIGTERM is passed through
