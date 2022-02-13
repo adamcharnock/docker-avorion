@@ -27,5 +27,8 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
-      - name: Build & Push
-        run: ./release.sh
+      - name: Build & Push (stable)
+        run: ./release.sh stable
+
+      - name: Build & Push (beta)
+        run: ./release.sh beta
