@@ -26,7 +26,7 @@ build() {
 		tags+=("$version" "$channel")
 }
 tag() {
-    docker tag "$docker_image" "$docker_image:$1"
+    docker tag "$docker_image:$channel" "$docker_image:$1"
 }
 push() {
     docker push "$docker_image:$1"
